@@ -69,3 +69,14 @@ console.log(mostrartresPrimeros('abcdefg'), mostrartresPrimeros('1234'), mostrar
 const mitadTexto = (a) => a.slice(0, a.length/2);
 
 console.log(mitadTexto('abcdefgh'), mitadTexto('1234'), mitadTexto('gedcba'));
+
+// Escribir una función que tome una cadena (a) como argumento
+// Eliminar los últimos 3 caracteres de un
+// Devuelve el resultado
+
+const eliminarUltTres = (a) => {
+  /*return a.slice(0, a.length -3);*/
+  return a.slice(0, -3);
+}
+
+console.log(eliminarUltTres('abcdefg'), eliminarUltTres('1234'), eliminarUltTres('fgedcba'));
