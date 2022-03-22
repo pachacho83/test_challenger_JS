@@ -106,10 +106,19 @@ console.log(vecesAenB('m', 'how many times does the character occur in this sent
             vecesAenB('?', 'how many times does the character occur in this sentence?'),
             vecesAenB('z', 'how many times does the character occur in this sentence?'));
 
-/*** Check if a number is a whole number ***/
+/*** Check if a number is a whole number (Comprobar si un número es un número entero) ***/
 // Escribir una función que tome un número (a) como argumento
 // Si a es un número entero (no tiene lugar decimal), devuelve verdadero
 // De lo contrario, devuelve falso
 
 const esEntero = (a) => Number.isInteger(a); //(a - Math.floor(a) === 0)
 console.log(esEntero(4), esEntero(1.123), esEntero(1048), esEntero(10.48));
+
+/*** Multiplication, division, and comparison operators (Operadores de multiplicación, división y comparación) ***/
+// Escribe una función que tome dos números (a y b) como argumentos
+// Si a es menor que b, dividimos a por b
+// De lo contrario, multiplica ambos números
+// Devuelve el valor resultante
+
+const dividirMulti = (a, b) => (a < b) ? a / b : a * b;
+console.log(dividirMulti(10, 100), dividirMulti(90, 45), dividirMulti(8, 20), dividirMulti(2, 0.5));
