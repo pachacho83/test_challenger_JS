@@ -1,4 +1,4 @@
-const vocales = ["a", "e", "i", "o", "u"]
+const vocales = ["a", "e", "i", "o", "u"];
 
 const saberVocales = (frase) => {
 

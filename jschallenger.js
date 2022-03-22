@@ -87,3 +87,15 @@ console.log(eliminarUltTres('abcdefg'), eliminarUltTres('1234'), eliminarUltTres
 const porcentajeNum = (a, b) => a * (b/100);
 
 console.log(porcentajeNum(100,50), porcentajeNum(10,1), porcentajeNum(500,25));
+
+
+// Escribe una función que tome 6 valores (a,b,c,d,e,f) como argumentos
+// Suma a y b
+// Luego restamos por c
+// Luego multiplica por d y divide por e
+// Finalmente elevamos a la potencia de f y devolvemos el resultado
+// Consejo: cuidado con el orden
+
+const variasOperaciones = (a, b, c, d, e, f) => ((((a+b)-c)*d)/e)**f;
+
+console.log(variasOperaciones(6,5,4,3,2,1), variasOperaciones(6,2,1,4,2,3), variasOperaciones(2,3,6,4,2,3));
