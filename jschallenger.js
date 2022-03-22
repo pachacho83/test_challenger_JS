@@ -131,3 +131,11 @@ console.log(dividirMulti(10, 100), dividirMulti(90, 45), dividirMulti(8, 20), di
 
 const concatenarSi = (a, b) => (a.includes(b)) ? b+a : a+b; //a.indexOf(b) === -1 ? a + b : b + a;
 console.log(concatenarSi('cheese', 'cake'), concatenarSi('lips', 's'), concatenarSi('Java', 'script'), concatenarSi(' think, therefore I am', 'I'));
+
+/*** Round a number to 2 decimal places (Redondear un número a 2 decimales) ***/
+// Escribir una función que tome un número (a) como argumento
+// Redondea a al segundo dígito después de la coma
+// Devuelve el número redondeado
+
+const redondearDos = (a) => +(Math.round(a + "e+2")  + "e-2") /*Number(a.toFixed(2)); //No es la mejor forma de redondear*/
+console.log(redondearDos(2.12397), redondearDos(3.136), redondearDos(1.12397), redondearDos(26.1379));
