@@ -109,3 +109,13 @@ console.log(porcentajeNum(100,50), porcentajeNum(10,1), porcentajeNum(500,25));
 const variasOperaciones = (a, b, c, d, e, f) => ((((a+b)-c)*d)/e)**f;
 
 console.log(variasOperaciones(6,5,4,3,2,1), variasOperaciones(6,2,1,4,2,3), variasOperaciones(2,3,6,4,2,3));
+
+/*** Check if a number is even (Comprobar si un número es par) ***/
+
+// Escribir una función que tome un número como argumento
+// Si el número es par, devuelve verdadero
+// De lo contrario, devuelve falso
+
+const siEsPar = (a) => (a % 2 === 0);
+
+console.log(siEsPar(10), siEsPar(-4), siEsPar(5), siEsPar(-111));
