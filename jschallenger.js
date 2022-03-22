@@ -80,3 +80,10 @@ const eliminarUltTres = (a) => {
 }
 
 console.log(eliminarUltTres('abcdefg'), eliminarUltTres('1234'), eliminarUltTres('fgedcba'));
+
+// Escribe una función que tome dos números (a y b) como argumento
+// Devuelve b por ciento de a
+
+const porcentajeNum = (a, b) => a * (b/100);
+
+console.log(porcentajeNum(100,50), porcentajeNum(10,1), porcentajeNum(500,25));
