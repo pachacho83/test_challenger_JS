@@ -139,3 +139,11 @@ console.log(concatenarSi('cheese', 'cake'), concatenarSi('lips', 's'), concatena
 
 const redondearDos = (a) => +(Math.round(a + "e+2")  + "e-2") /*Number(a.toFixed(2)); //No es la mejor forma de redondear*/
 console.log(redondearDos(2.12397), redondearDos(3.136), redondearDos(1.12397), redondearDos(26.1379));
+
+/*** Split a number into its digits (Dividir un número en sus dígitos) ***/
+// Escribir una función que tome un número (a) como argumento
+// Dividir a en sus dígitos individuales y devolverlos en una matriz
+// Consejo: es posible que desee cambiar el tipo de número para la división
+
+const toArrayNumeros = (a) => [...a.toString()].map(numero => Number(numero)); /*const string = a + ''; const strings = string.split(''); return strings.map(digit => Number(digit)); //solucion autor*/
+console.log(toArrayNumeros(10), toArrayNumeros(931), toArrayNumeros(193278));
