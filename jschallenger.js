@@ -147,3 +147,14 @@ console.log(redondearDos(2.12397), redondearDos(3.136), redondearDos(1.12397), r
 
 const toArrayNumeros = (a) => [...a.toString()].map(numero => Number(numero)); /*const string = a + ''; const strings = string.split(''); return strings.map(digit => Number(digit)); //solucion autor*/
 console.log(toArrayNumeros(10), toArrayNumeros(931), toArrayNumeros(193278));
+
+/*** Clear up the chaos behind these strings (Aclarar el caos detrás de estas cuerdas) ***/
+// Parece que algo le pasó a estas cadenas
+// ¿Puedes descubrir cómo aclarar el caos?
+// Escriba una función que una estas cadenas de modo que formen las siguientes palabras:
+// 'Javascript', 'Campo' y 'Centro'
+// Es posible que desee aplicar métodos básicos de cadena JS como replace(), split(), slice(), etc.
+
+const ordenarCaos = (a, b) => (a.charAt(0).toUpperCase() + a.slice(1).replace('%', '')) +  (b.replace('%', '').split("").reverse().join("")); 
+/*const func = x => x.replace('%',''); const first = func(a); const second = func(b).split('').reverse().join(''); return first.charAt(0).toUpperCase() + first.slice(1) + second; //solucion autor*/
+console.log(ordenarCaos('java', 'tpi%rcs'), ordenarCaos('c%ountry', 'edis'), ordenarCaos('down', 'nw%ot'));
