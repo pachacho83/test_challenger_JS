@@ -119,3 +119,25 @@ console.log(variasOperaciones(6,5,4,3,2,1), variasOperaciones(6,2,1,4,2,3), vari
 const siEsPar = (a) => (a % 2 === 0);
 
 console.log(siEsPar(10), siEsPar(-4), siEsPar(5), siEsPar(-111));
+
+/*** How many times does a character occur? (¿Cuántas veces aparece un personaje?) ***/
+// Escribe una función que tome dos cadenas (a y b) como argumentos
+// Devuelve el numero de veces que a ocurre en b
+
+const vecesAenB = (a, b) => {
+
+  /*let contador = 0;
+
+  for (const letra of b) {
+    (letra.includes(a)) && contador++;
+  }
+
+  return contador;*/
+
+  return b.split(a).length - 1;
+};
+
+console.log(vecesAenB('m', 'how many times does the character occur in this sentence?'),
+            vecesAenB('h', 'how many times does the character occur in this sentence?'),
+            vecesAenB('?', 'how many times does the character occur in this sentence?'),
+            vecesAenB('z', 'how many times does the character occur in this sentence?'));
