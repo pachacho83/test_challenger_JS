@@ -26,13 +26,7 @@ console.log(tipoValor(1), tipoValor(false), tipoValor({}), tipoValor(null), tipo
 // Escribir una función que tome una cadena (a) y un número (n) como argumento
 // Devuelve el carácter enésimo de 'a'
 
-const devolverCaracter = (a, n) => {
-  /*const arrayText = [...a].splice(0,n);
-  return arrayText[arrayText.length - 1];*/
-
-  return a[n - 1];
-}
-
+const devolverCaracter = (a, n) =>  a[n - 1]; /*const arrayText = [...a].splice(0,n); return arrayText[arrayText.length - 1];*/
 console.log(devolverCaracter('abcd',1), devolverCaracter('zyxbwpl',5), devolverCaracter('gfedcba',3));
 
 /*** Remove first n characters of string (Eliminar los primeros n caracteres de la cadena) ***/
@@ -40,12 +34,7 @@ console.log(devolverCaracter('abcd',1), devolverCaracter('zyxbwpl',5), devolverC
 // Eliminar los primeros 3 caracteres de un
 // Devuelve el resultado
 
-const eliminarCaracteres = (a) => {
-
-  /*return a.substring(3,10);*/
-  return a.slice(3);
-}
-
+const eliminarCaracteres = (a) => a.slice(3); /*return a.substring(3,10);*/
 console.log(eliminarCaracteres('abcdefg'), eliminarCaracteres('1234'), eliminarCaracteres('fgedcba'));
 
 /*** Get last n characters of string (Obtener los últimos n caracteres de la cadena) ***/
@@ -53,11 +42,7 @@ console.log(eliminarCaracteres('abcdefg'), eliminarCaracteres('1234'), eliminarC
 // Extrae los últimos 3 caracteres de la cadena
 // Devuelve el resultado
 
-const eliminarTresUltimos = (str) => {
-  /*return str.substring(str.length -3, str.length);*/
-  return str.slice(-3);
-}
-
+const eliminarTresUltimos = (str) => str.slice(-3); /*return str.substring(str.length -3, str.length);*/
 console.log(eliminarTresUltimos('abcdefg'), eliminarTresUltimos('1234'), eliminarTresUltimos('fgedcba'));
 
 /*** Get first n characters of string (Obtener los primeros n caracteres de la cadena) ***/
@@ -66,7 +51,6 @@ console.log(eliminarTresUltimos('abcdefg'), eliminarTresUltimos('1234'), elimina
 // Devuelve el resultado
 
 const mostrartresPrimeros = (a) => a.slice(0, 3);
-
 console.log(mostrartresPrimeros('abcdefg'), mostrartresPrimeros('1234'), mostrartresPrimeros('fgedcba'));
 
 /*** Extract first half of string (Extraer la primera mitad de la cadena) ***/
@@ -75,7 +59,6 @@ console.log(mostrartresPrimeros('abcdefg'), mostrartresPrimeros('1234'), mostrar
 // Devuelve el resultado
 
 const mitadTexto = (a) => a.slice(0, a.length/2);
-
 console.log(mitadTexto('abcdefgh'), mitadTexto('1234'), mitadTexto('gedcba'));
 
 /*** Remove last n characters of string (Eliminar los últimos n caracteres de la cadena) ***/
@@ -83,11 +66,7 @@ console.log(mitadTexto('abcdefgh'), mitadTexto('1234'), mitadTexto('gedcba'));
 // Eliminar los últimos 3 caracteres de un
 // Devuelve el resultado
 
-const eliminarUltTres = (a) => {
-  /*return a.slice(0, a.length -3);*/
-  return a.slice(0, -3);
-}
-
+const eliminarUltTres = (a) => a.slice(0, -3); /*return a.slice(0, a.length -3);*/
 console.log(eliminarUltTres('abcdefg'), eliminarUltTres('1234'), eliminarUltTres('fgedcba'));
 
 /*** Return the percentage of a number (Devuelve el porcentaje de un número) ***/
@@ -95,7 +74,6 @@ console.log(eliminarUltTres('abcdefg'), eliminarUltTres('1234'), eliminarUltTres
 // Devuelve b por ciento de a
 
 const porcentajeNum = (a, b) => a * (b/100);
-
 console.log(porcentajeNum(100,50), porcentajeNum(10,1), porcentajeNum(500,25));
 
 /*** Basic JavaScript math operators (Operadores matemáticos básicos de JavaScript) ***/
@@ -107,7 +85,6 @@ console.log(porcentajeNum(100,50), porcentajeNum(10,1), porcentajeNum(500,25));
 // Consejo: cuidado con el orden
 
 const variasOperaciones = (a, b, c, d, e, f) => ((((a+b)-c)*d)/e)**f;
-
 console.log(variasOperaciones(6,5,4,3,2,1), variasOperaciones(6,2,1,4,2,3), variasOperaciones(2,3,6,4,2,3));
 
 /*** Check if a number is even (Comprobar si un número es par) ***/
@@ -117,27 +94,22 @@ console.log(variasOperaciones(6,5,4,3,2,1), variasOperaciones(6,2,1,4,2,3), vari
 // De lo contrario, devuelve falso
 
 const siEsPar = (a) => (a % 2 === 0);
-
 console.log(siEsPar(10), siEsPar(-4), siEsPar(5), siEsPar(-111));
 
 /*** How many times does a character occur? (¿Cuántas veces aparece un personaje?) ***/
 // Escribe una función que tome dos cadenas (a y b) como argumentos
 // Devuelve el numero de veces que a ocurre en b
 
-const vecesAenB = (a, b) => {
-
-  /*let contador = 0;
-
-  for (const letra of b) {
-    (letra.includes(a)) && contador++;
-  }
-
-  return contador;*/
-
-  return b.split(a).length - 1;
-};
-
+const vecesAenB = (a, b) => b.split(a).length - 1; /*let contador = 0; for (const letra of b) { (letra.includes(a)) && contador++; } return contador;*/
 console.log(vecesAenB('m', 'how many times does the character occur in this sentence?'),
             vecesAenB('h', 'how many times does the character occur in this sentence?'),
             vecesAenB('?', 'how many times does the character occur in this sentence?'),
             vecesAenB('z', 'how many times does the character occur in this sentence?'));
+
+/*** Check if a number is a whole number ***/
+// Escribir una función que tome un número (a) como argumento
+// Si a es un número entero (no tiene lugar decimal), devuelve verdadero
+// De lo contrario, devuelve falso
+
+const esEntero = (a) => Number.isInteger(a); //(a - Math.floor(a) === 0)
+console.log(esEntero(4), esEntero(1.123), esEntero(1048), esEntero(10.48));
