@@ -111,7 +111,7 @@ console.log(vecesAenB('m', 'how many times does the character occur in this sent
 // Si a es un número entero (no tiene lugar decimal), devuelve verdadero
 // De lo contrario, devuelve falso
 
-const esEntero = (a) => Number.isInteger(a); //(a - Math.floor(a) === 0)
+const esEntero = (a) => Number.isInteger(a); //(a - Math.floor(a) === 0);
 console.log(esEntero(4), esEntero(1.123), esEntero(1048), esEntero(10.48));
 
 /*** Multiplication, division, and comparison operators (Operadores de multiplicación, división y comparación) ***/
@@ -122,3 +122,12 @@ console.log(esEntero(4), esEntero(1.123), esEntero(1048), esEntero(10.48));
 
 const dividirMulti = (a, b) => (a < b) ? a / b : a * b;
 console.log(dividirMulti(10, 100), dividirMulti(90, 45), dividirMulti(8, 20), dividirMulti(2, 0.5));
+
+/*** Check whether a string contains another string and concatenate (Comprobar si una cadena contiene otra cadena y concatenar) ***/
+// Escribe una función que tome dos cadenas (a y b) como argumentos
+// Si a contiene b, agrega b al comienzo de a
+// Si no, añádelo al final
+// Devuelve la concatenación
+
+const concatenarSi = (a, b) => (a.includes(b)) ? b+a : a+b; //a.indexOf(b) === -1 ? a + b : b + a;
+console.log(concatenarSi('cheese', 'cake'), concatenarSi('lips', 's'), concatenarSi('Java', 'script'), concatenarSi(' think, therefore I am', 'I'));
