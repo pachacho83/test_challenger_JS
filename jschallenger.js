@@ -158,3 +158,48 @@ console.log(toArrayNumeros(10), toArrayNumeros(931), toArrayNumeros(193278));
 const ordenarCaos = (a, b) => (a.charAt(0).toUpperCase() + a.slice(1).replace('%', '')) +  (b.replace('%', '').split("").reverse().join("")); 
 /*const func = x => x.replace('%',''); const first = func(a); const second = func(b).split('').reverse().join(''); return first.charAt(0).toUpperCase() + first.slice(1) + second; //solucion autor*/
 console.log(ordenarCaos('java', 'tpi%rcs'), ordenarCaos('c%ountry', 'edis'), ordenarCaos('down', 'nw%ot'));
+
+/*** Return the next higher prime number (Devuelve el siguiente número primo más alto) ***/
+// Este desafío es un poco más complejo
+// Escribir una función que tome un número (a) como argumento
+// Si a es primo, devuelve a
+// Si no, devuelve el siguiente número primo más alto
+
+const saberPrimo = (a) => {
+
+  const verificarPrimo = (num) => {
+
+    let numeroMulti = 2;
+
+    for (let i = 2; i < num; i++) {
+      ((num % i) === 0) && numeroMulti++;
+    }
+     return numeroMulti;
+  }
+
+  let nuevoNumero = a;
+
+  while(verificarPrimo(nuevoNumero) !== 2)
+  {
+    nuevoNumero++;
+  }
+
+  return nuevoNumero;
+}
+
+/*
+//solucion autor
+
+function myFunction( a ) {
+  function isPrime(num) {
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+      if (num % i === 0) return false;
+    }
+    return num > 1;
+  }
+ let n = a;
+ while (!isPrime(n)) n++;
+return n
+}*/
+
+console.log(saberPrimo(38), saberPrimo(7), saberPrimo(115), saberPrimo(2000));
