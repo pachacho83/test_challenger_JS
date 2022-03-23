@@ -169,6 +169,19 @@ const saberPrimo = (a) => {
 
   const verificarPrimo = (num) => {
 
+    /*
+    // solucion Autor
+    function isPrime(num) {
+      for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+      }
+      return num > 1;
+    }
+    let n = a;
+    while (!isPrime(n)) n++;
+    return n
+    */
+
     let numeroMulti = 2;
 
     for (let i = 2; i < num; i++) {
@@ -186,21 +199,6 @@ const saberPrimo = (a) => {
 
   return nuevoNumero;
 }
-
-/*
-//solucion autor
-
-function myFunction( a ) {
-  function isPrime(num) {
-    for (let i = 2; i <= Math.sqrt(num); i++) {
-      if (num % i === 0) return false;
-    }
-    return num > 1;
-  }
- let n = a;
- while (!isPrime(n)) n++;
-return n
-}*/
 
 console.log(saberPrimo(38), saberPrimo(7), saberPrimo(115), saberPrimo(2000));
 
@@ -227,3 +225,36 @@ const findNumNatural = (x, y) => {
 }
 
 console.log(findNumNatural(1, 23), findNumNatural(23, 23), findNumNatural(7, 3), findNumNatural(-5, 7));
+
+/*** Insert character after every n characters (backwards) (Insertar carácter después de cada n caracteres (hacia atrás)) ***/
+// Escribe una función que tome dos cadenas (a y b) como argumentos
+// Comenzando al final de 'a', inserte 'b' después de cada tercer carácter de 'a'
+// Devuelve la cadena resultante
+
+const insertCaracterAtras = (a, b) => {
+
+  const atras = a.split("").reverse().join("");
+  let arrayLetras = '';
+
+  for (let i = 0; i < atras.length; i++) {
+    
+    if(i % 3 === 0 && i > 0) 
+      arrayLetras = arrayLetras + b;
+
+    arrayLetras = arrayLetras + atras[i];
+  }
+
+  return arrayLetras.split("").reverse().join("");
+
+  /*
+  //solucion autor
+  let result = [];
+  let rest = a;
+  while (rest.length) {
+    result.push(rest.slice(-3));
+    rest = rest.slice(0, -3);
+  }
+  return result.reverse().join(b);*/
+}
+
+console.log(insertCaracterAtras('1234567','.'), insertCaracterAtras('abcde','$'), insertCaracterAtras('zxyzxyzxyzxyzxyz','w'));
