@@ -203,3 +203,27 @@ return n
 }*/
 
 console.log(saberPrimo(38), saberPrimo(7), saberPrimo(115), saberPrimo(2000));
+
+/*** Find next higher natural number that is divisble by y (Encuentre el siguiente número natural más alto que sea divisible por y) ***/
+// Escribe una función que tome dos números, digamos x e y, como argumentos
+// Comprobar si x es divisible por y
+// Si es así, devuelve x
+// Si no, devuelve el siguiente número natural más alto que sea divisible por y
+
+const findNumNatural = (x, y) => {
+
+  /*const verificarEntero = (num) => num % y;
+  let nuevoNumero = x;
+
+  while(verificarEntero(nuevoNumero) !== 0)
+  {
+    nuevoNumero++;
+  }
+
+  return nuevoNumero;*/
+
+  while (x % y !== 0) x++;
+  return x;
+}
+
+console.log(findNumNatural(1, 23), findNumNatural(23, 23), findNumNatural(7, 3), findNumNatural(-5, 7));
