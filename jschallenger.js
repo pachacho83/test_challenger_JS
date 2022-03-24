@@ -258,3 +258,32 @@ const insertCaracterAtras = (a, b) => {
 }
 
 console.log(insertCaracterAtras('1234567','.'), insertCaracterAtras('abcde','$'), insertCaracterAtras('zxyzxyzxyzxyzxyz','w'));
+
+/*** Find the correct word by incrementing letters in alphabet (Encuentra la palabra correcta incrementando letras en el alfabeto) ***/
+// Escribir una función que tome una cadena como argumento
+// Tal como está, la cadena no tiene significado
+// Incrementar cada letra a la siguiente letra del alfabeto
+// Devuelve la palabra correcta
+
+const nextLetraAbecedario = (str) => {
+
+  const abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'w', 'x', 'y', 'z'];
+  let newPalabra = '';
+  
+  for (const item of str) {
+
+    const indice = abc.indexOf(item);
+    newPalabra = newPalabra + abc[indice+1];
+  }
+
+  return newPalabra;
+
+  /*
+  //solucion autor
+  const arr = [...str];
+  const correctedArray = arr.map(e => String.fromCharCode(e.charCodeAt()+1));
+  return correctedArray.join('');
+  */
+}
+
+console.log(nextLetraAbecedario('bnchmf'), nextLetraAbecedario('bgddrd'), nextLetraAbecedario('sdrshmf'));
