@@ -287,3 +287,13 @@ const nextLetraAbecedario = (str) => {
 }
 
 console.log(nextLetraAbecedario('bnchmf'), nextLetraAbecedario('bgddrd'), nextLetraAbecedario('sdrshmf'));
+
+
+/*********************** javascript Arrays *******************************/
+
+/*** Get nth element of array (Obtener el elemento n de la matriz) ***/
+// Escribir una función que tome una matriz (a) y un valor (n) como argumento
+// Devuelve el n-ésimo elemento de 'a'
+
+const getElementArray = (a, n) => a[n-1];
+console.log(getElementArray([1,2,3,4,5],3), getElementArray([10,9,8,7,6],5), getElementArray([7,2,1,6,3],1));
