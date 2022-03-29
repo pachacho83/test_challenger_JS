@@ -365,7 +365,13 @@ console.log(sortArrayDescending([1,3,2]), sortArrayDescending([4,2,3,1]));
 const sortArrayStringsAlphabetically = (arr) => arr.sort();
 console.log(sortArrayStringsAlphabetically(['b', 'c', 'd', 'a']), sortArrayStringsAlphabetically(['z', 'c', 'd', 'a', 'y', 'a', 'w']));
 
-/***  ***/
+/*** Return the average of an array of numbers (Devuelve el promedio de una matriz de números) ***/
+// Escribir una función que tome una matriz de números como argumento
+// Debería devolver el promedio de los números
+
+const averageArrayNumbers = (arr) => arr.reduce((acum, item) => acum + item, 0) / arr.length;
+console.log(averageArrayNumbers([10,100,40]), averageArrayNumbers([10,100,1000]), averageArrayNumbers([-50,0,50,200]));
+
 /***  ***/
 /***  ***/
 /***  ***/
