@@ -350,7 +350,13 @@ console.log(numberElements([1,2,2,4]), numberElements([9,9,9]), numberElements([
 const countNumberNegative = (a) => a.filter(element => element < 0).length;
 console.log(countNumberNegative([1,-2,2,-4]), countNumberNegative([0,9,1]), countNumberNegative([4,-3,2,1,0]));
 
-/***  ***/
+/*** Sort an array of numbers in descending order (Ordenar una matriz de números en orden descendente) ***/
+// Escribir una función que tome una matriz de números como argumento
+// Debería devolver una matriz con los números ordenados en orden descendente
+
+const sortArrayDescending = (arr) => arr.sort( (a,b) => b-a );
+console.log(sortArrayDescending([1,3,2]), sortArrayDescending([4,2,3,1]));
+
 /***  ***/
 /***  ***/
 /***  ***/
