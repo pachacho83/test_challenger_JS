@@ -321,7 +321,13 @@ console.log(lastElements([1,2,3,4]), lastElements([5,4,3,2,1,0]), lastElements([
 const firstElementsN = (a) => a.slice(0,3);
 console.log(firstElementsN([1,2,3,4]), firstElementsN([5,4,3,2,1,0]), firstElementsN([99,1,1]));
 
-/***  ***/
+/*** Return last n array elements (Devuelve los últimos n elementos de la matriz) ***/
+// Escribe una función que tome una matriz (a) y un número (n) como argumentos
+// Debería devolver los últimos n elementos de un
+
+const lastElementsN = (a, n) => a.slice(n * -1); //a.slice(-n);
+console.log(lastElementsN([1, 2, 3, 4, 5], 2), lastElementsN([1, 2, 3], 6), lastElementsN([1, 2, 3, 4, 5, 6, 7, 8], 3));
+
 /***  ***/
 /***  ***/
 /***  ***/
