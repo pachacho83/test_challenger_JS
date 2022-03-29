@@ -343,7 +343,13 @@ console.log(removeSpecificElement([1,2,3], 2), removeSpecificElement([1,2,'2'], 
 const numberElements = (a) => a.length;
 console.log(numberElements([1,2,2,4]), numberElements([9,9,9]), numberElements([4,3,2,1,0]));
 
-/***  ***/
+/*** Count number of negative values in array (Cuente el número de valores negativos en la matriz) ***/
+// Escribir una función que tome una matriz de números como argumento
+// Devuelve el número de valores negativos en la matriz
+
+const countNumberNegative = (a) => a.filter(element => element < 0).length;
+console.log(countNumberNegative([1,-2,2,-4]), countNumberNegative([0,9,1]), countNumberNegative([4,-3,2,1,0]));
+
 /***  ***/
 /***  ***/
 /***  ***/
