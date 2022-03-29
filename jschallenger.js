@@ -328,7 +328,14 @@ console.log(firstElementsN([1,2,3,4]), firstElementsN([5,4,3,2,1,0]), firstEleme
 const lastElementsN = (a, n) => a.slice(n * -1); //a.slice(-n);
 console.log(lastElementsN([1, 2, 3, 4, 5], 2), lastElementsN([1, 2, 3], 6), lastElementsN([1, 2, 3, 4, 5, 6, 7, 8], 3));
 
-/***  ***/
+/*** Remove a specific array element (Eliminar un elemento de matriz específico) ***/
+// Escribir una función que tome una matriz (a) y un valor (b) como argumento
+// La función debe limpiar a de todas las apariciones de b
+// Devuelve la matriz filtrada
+
+const removeSpecificElement = (a, b) => a.filter(element => element !== b);
+console.log(removeSpecificElement([1,2,3], 2), removeSpecificElement([1,2,'2'], '2'), removeSpecificElement([false,'2',1], false), removeSpecificElement([1,2,'2',1], 1));
+
 /***  ***/
 /***  ***/
 /***  ***/
