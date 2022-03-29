@@ -306,7 +306,13 @@ console.log(getElementArray([1,2,3,4,5],3), getElementArray([10,9,8,7,6],5), get
 const deleteElements = (a) => a.slice(3);
 console.log(deleteElements([1,2,3,4]), deleteElements([5,4,3,2,1,0]), deleteElements([99,1,1]));
 
-/***  ***/
+/*** Get last n elements of an array (Obtener los últimos n elementos de una matriz) ***/
+// Escribir una función que tome una matriz (a) como argumento
+// Extraer los últimos 3 elementos de un
+// Devuelve la matriz resultante
+const lastElements = (a) => a.slice(-3);
+console.log(lastElements([1,2,3,4]), lastElements([5,4,3,2,1,0]), lastElements([99,1,1]));
+
 /***  ***/
 /***  ***/
 /***  ***/
