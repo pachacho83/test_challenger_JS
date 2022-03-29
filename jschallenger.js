@@ -336,7 +336,13 @@ console.log(lastElementsN([1, 2, 3, 4, 5], 2), lastElementsN([1, 2, 3], 6), last
 const removeSpecificElement = (a, b) => a.filter(element => element !== b);
 console.log(removeSpecificElement([1,2,3], 2), removeSpecificElement([1,2,'2'], '2'), removeSpecificElement([false,'2',1], false), removeSpecificElement([1,2,'2',1], 1));
 
-/***  ***/
+/*** Count number of elements in JavaScript array (Cuente el número de elementos en la matriz de JavaScript) ***/
+// Escribir una función que tome una matriz (a) como argumento
+// Devuelve el número de elementos en un
+
+const numberElements = (a) => a.length;
+console.log(numberElements([1,2,2,4]), numberElements([9,9,9]), numberElements([4,3,2,1,0]));
+
 /***  ***/
 /***  ***/
 /***  ***/
