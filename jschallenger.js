@@ -357,7 +357,14 @@ console.log(countNumberNegative([1,-2,2,-4]), countNumberNegative([0,9,1]), coun
 const sortArrayDescending = (arr) => arr.sort( (a,b) => b-a );
 console.log(sortArrayDescending([1,3,2]), sortArrayDescending([4,2,3,1]));
 
-/***  ***/
+/*** Sort an array of strings alphabetically (Ordenar una matriz de cadenas alfabéticamente) ***/
+// Escribir una función que tome una matriz de cadenas como argumento
+// Ordenar alfabéticamente los elementos de la matriz
+// Devuelve el resultado
+
+const sortArrayStringsAlphabetically = (arr) => arr.sort();
+console.log(sortArrayStringsAlphabetically(['b', 'c', 'd', 'a']), sortArrayStringsAlphabetically(['z', 'c', 'd', 'a', 'y', 'a', 'w']));
+
 /***  ***/
 /***  ***/
 /***  ***/
