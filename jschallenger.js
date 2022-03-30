@@ -387,7 +387,13 @@ console.log(longestStringArray(['help', 'me']), longestStringArray(['I', 'need',
 const checkElementsEqual = (arr) => new Set(arr).size === 1;
 console.log(checkElementsEqual([true, true, true, true]), checkElementsEqual(['test', 'test', 'test']), checkElementsEqual([1,1,1,2]), checkElementsEqual(['10',10,10,10]));
 
-/***  ***/
+/*** Merge an arbitrary number of arrays (Combinar un número arbitrario de matrices) ***/
+// Escribir una función que tome argumentos en un número arbitrario de arreglos
+// Debería devolver una matriz que contenga los valores de todas las matrices
+
+const mergeArbitraryArrays = (...arrays) => [].concat(...arrays); //arrays.flat();
+console.log(mergeArbitraryArrays([1, 2, 3], [4, 5, 6]), mergeArbitraryArrays(['a', 'b', 'c'], [4, 5, 6]), mergeArbitraryArrays([true, true], [1, 2], ['a', 'b']));
+
 /***  ***/
 /***  ***/
 /***  ***/
