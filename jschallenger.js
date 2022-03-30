@@ -372,7 +372,13 @@ console.log(sortArrayStringsAlphabetically(['b', 'c', 'd', 'a']), sortArrayStrin
 const averageArrayNumbers = (arr) => arr.reduce((acum, item) => acum + item, 0) / arr.length;
 console.log(averageArrayNumbers([10,100,40]), averageArrayNumbers([10,100,1000]), averageArrayNumbers([-50,0,50,200]));
 
-/***  ***/
+/*** Return the longest string from an array of strings (Devuelve la cadena más larga de una matriz de cadenas) ***/
+// Escribir una función que tome una matriz de cadenas como argumento
+// Devuelve la cadena más larga
+
+const longestStringArray = (arr) => arr.reduce((a, b) => a.length <= b.length ? b : a);
+console.log(longestStringArray(['help', 'me']), longestStringArray(['I', 'need', 'candy']));
+
 /***  ***/
 /***  ***/
 /***  ***/
