@@ -379,7 +379,14 @@ console.log(averageArrayNumbers([10,100,40]), averageArrayNumbers([10,100,1000])
 const longestStringArray = (arr) => arr.reduce((a, b) => a.length <= b.length ? b : a);
 console.log(longestStringArray(['help', 'me']), longestStringArray(['I', 'need', 'candy']));
 
-/***  ***/
+/*** Check if all array elements are equal (Comprobar si todos los elementos de la matriz son iguales) ***/
+// Escribir una función que tome una matriz como argumento
+// Debería devolver verdadero si todos los elementos de la matriz son iguales
+// Debería devolver falso de lo contrario
+
+const checkElementsEqual = (arr) => new Set(arr).size === 1;
+console.log(checkElementsEqual([true, true, true, true]), checkElementsEqual(['test', 'test', 'test']), checkElementsEqual([1,1,1,2]), checkElementsEqual(['10',10,10,10]));
+
 /***  ***/
 /***  ***/
 /***  ***/
