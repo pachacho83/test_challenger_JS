@@ -418,7 +418,20 @@ console.log(sortArrayObject([{a:1,b:2},{a:5,b:4}]), sortArrayObject([{a:2,b:10},
 const mergeTwoArraysDuplicateValues = (a, b) => [...new Set([...a, ...b])].sort((x, y) => x - y);
 console.log(mergeTwoArraysDuplicateValues([1, 2, 3], [3, 4, 5]), mergeTwoArraysDuplicateValues([-10, 22, 333, 42], [-11, 5, 22, 41, 42]));
 
-/***  ***/
+/*** Sum up all array elements with values greater than (Sumar todos los elementos de la matriz con valores mayores que) ***/
+// Escribe una función que tome una matriz (a) y un número (b) como argumentos
+// Sumar todos los elementos de la matriz con un valor mayor que b
+// Devuelve la suma
+
+const sumAllElementsValuesGreater = (a, b) => a.filter(item => item > b).reduce((acum, item) => acum + item, 0);
+/*solucion autor
+return a.reduce((sum, cur) => {
+    if (cur > b) return sum + cur;
+    return sum;
+  }, 0);
+*/
+console.log(sumAllElementsValuesGreater([1, 2, 3, 4, 5, 6, 7], 2), sumAllElementsValuesGreater([-10, -11, -3, 1, -4], -3), sumAllElementsValuesGreater([78, 99, 100, 101, 401], 99));
+
 /***  ***/
 /***  ***/
 /***  ***/
