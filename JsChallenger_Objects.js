@@ -47,7 +47,14 @@ console.log(creatingObjects('a'), creatingObjects('z'), creatingObjects('b'));
 const creatingObjectsTwo = (a, b) => new Object({ [a] : b });
 console.log(creatingObjectsTwo('a','b'), creatingObjectsTwo('z','x'), creatingObjectsTwo('b','w'));
 
-/***  ***/
+/*** Creating Javascript objects three (Creación de objetos Javascript tres) ***/
+// Escribe una función que tome dos arreglos (a y b) como argumentos
+// Crear un objeto que tenga propiedades con claves 'a' y valores correspondientes 'b'
+// Devolver el objeto
+
+const creatingObjectsThree = (a, b) => a.reduce((acc, item, key) => ({ ...acc, [item]: b[key] }), {});
+console.log(creatingObjectsThree(['a','b','c'],[1,2,3]), creatingObjectsThree(['w','x','y','z'],[10,9,5,2]), creatingObjectsThree([1,'b'],['a',2]));
+
 /***  ***/
 /***  ***/
 /***  ***/
