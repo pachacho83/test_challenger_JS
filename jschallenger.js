@@ -199,7 +199,6 @@ const nextHigherPrimeNumber = (a) => {
 
   return newNumber;
 }
-
 console.log(nextHigherPrimeNumber(38), nextHigherPrimeNumber(7), nextHigherPrimeNumber(115), nextHigherPrimeNumber(2000));
 
 /*** Find next higher natural number that is divisble by y (Encuentre el siguiente número natural más alto que sea divisible por y) ***/
@@ -223,7 +222,6 @@ const findNextHigherNaturalNumber = (x, y) => {
   while (x % y !== 0) x++;
   return x;
 }
-
 console.log(findNextHigherNaturalNumber(1, 23), findNextHigherNaturalNumber(23, 23), findNextHigherNaturalNumber(7, 3), findNextHigherNaturalNumber(-5, 7));
 
 /*** Insert character after every n characters (backwards) (Insertar carácter después de cada n caracteres (hacia atrás)) ***/
@@ -256,7 +254,6 @@ const insertCharacterAfterEveryN = (a, b) => {
   }
   return result.reverse().join(b);*/
 }
-
 console.log(insertCharacterAfterEveryN('1234567','.'), insertCharacterAfterEveryN('abcde','$'), insertCharacterAfterEveryN('zxyzxyzxyzxyzxyz','w'));
 
 /*** Find the correct word by incrementing letters in alphabet (Encuentra la palabra correcta incrementando letras en el alfabeto) ***/
@@ -285,7 +282,6 @@ const findCorrectWord = (str) => {
   return correctedArray.join('');
   */
 }
-
 console.log(findCorrectWord('bnchmf'), findCorrectWord('bgddrd'), findCorrectWord('sdrshmf'));
 
 
@@ -498,7 +494,27 @@ const defineArrayConditionalElements = (arr, num) => {
 */
 console.log(defineArrayConditionalElements([1,2,3], 6), defineArrayConditionalElements(['a','b'], 2), defineArrayConditionalElements([null,false], 11));
 
-/***  ***/
+/*** Get every nth element of array (Obtenga cada enésimo elemento de la matriz) ***/
+// Escribir una función que tome una matriz (a) y un valor (n) como argumentos
+// Guardar cada n-ésimo elemento en una nueva matriz
+// Devuelve la nueva matriz
+
+const getEveryElementN = (a, n) => a.filter((item,key) => ((key+1)%n === 0) && item);
+/*solucion Autor 
+  let rest = [...a];
+  let result = [];
+  for (let i = 0; i < a.length; i++) {
+    if (rest.length < n) break;
+    result.push(rest[n - 1]);
+    rest = rest.slice(n);
+  }
+  return result;
+*/
+console.log(getEveryElementN([1,2,3,4,5,6,7,8,9,10],3), getEveryElementN([10,9,8,7,6,5,4,3,2,1],5), getEveryElementN([7,2,1,6,3,4,5,8,9,10],2));
+
+
+/*********************** javascript Objects *******************************/
+
 /***  ***/
 /***  ***/
 /***  ***/
