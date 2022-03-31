@@ -394,7 +394,14 @@ console.log(checkElementsEqual([true, true, true, true]), checkElementsEqual(['t
 const mergeArbitraryArrays = (...arrays) => [].concat(...arrays); //arrays.flat();
 console.log(mergeArbitraryArrays([1, 2, 3], [4, 5, 6]), mergeArbitraryArrays(['a', 'b', 'c'], [4, 5, 6]), mergeArbitraryArrays([true, true], [1, 2], ['a', 'b']));
 
-/***  ***/
+/*** Sort array by object property (Ordenar matriz por propiedad de objeto) ***/
+// Escribir una función que tome una matriz de objetos como argumento
+// Ordenar la matriz por propiedad b en orden ascendente
+// Devuelve la matriz ordenada
+
+const sortArrayObject = (arr) => arr[0].b > arr[1].b ? [arr[1], arr[0]] : [arr[0], arr[1]];
+console.log(sortArrayObject([{a:1,b:2},{a:5,b:4}]), sortArrayObject([{a:2,b:10},{a:5,b:4}]), sortArrayObject([{a:1,b:7},{a:2,b:1}]));
+
 /***  ***/
 /***  ***/
 /***  ***/
