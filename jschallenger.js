@@ -402,7 +402,22 @@ console.log(mergeArbitraryArrays([1, 2, 3], [4, 5, 6]), mergeArbitraryArrays(['a
 const sortArrayObject = (arr) => arr[0].b > arr[1].b ? [arr[1], arr[0]] : [arr[0], arr[1]];
 console.log(sortArrayObject([{a:1,b:2},{a:5,b:4}]), sortArrayObject([{a:2,b:10},{a:5,b:4}]), sortArrayObject([{a:1,b:7},{a:2,b:1}]));
 
-/***  ***/
+/*** Merge two arrays with duplicate values (Combinar dos matrices con valores duplicados) ***/
+// Escribe una función que tome dos arreglos como argumentos
+// Combinar ambas matrices y eliminar valores duplicados
+// Ordenar el resultado de la fusión en orden ascendente
+// Devuelve la matriz resultante
+
+/*const mergeTwoArraysDuplicateValues = (a, b) => {
+
+  const mergeArray = a.concat(b);
+  const deleteDuplicates = new Set(mergeArray);
+
+  return [...deleteDuplicates].sort( (a,b) => a-b );
+}*/
+const mergeTwoArraysDuplicateValues = (a, b) => [...new Set([...a, ...b])].sort((x, y) => x - y);
+console.log(mergeTwoArraysDuplicateValues([1, 2, 3], [3, 4, 5]), mergeTwoArraysDuplicateValues([-10, 22, 333, 42], [-11, 5, 22, 41, 42]));
+
 /***  ***/
 /***  ***/
 /***  ***/
