@@ -31,7 +31,14 @@ console.log(accessingPropertiesThree({  continent: 'Asia',  country: 'Japan'}, '
 const checkPropertyExists = (a, b) => (Object.keys(a).indexOf(b) > 0 ) ? true : false; /*solucion Autor b in a;*/
 console.log(checkPropertyExists({a:1,b:2,c:3},'b'), checkPropertyExists({x:'a',y:'b',z:'c'},'a'), checkPropertyExists({x:'a',y:'b',z:'c'},'z'));
 
-/***  ***/
+/*** Creating Javascript objects one (Creación de objetos Javascript uno) ***/
+// Escribir una función que tenga una cadena (a) como argumento
+// Crear un objeto que tenga una propiedad con clave 'clave' y un valor de a
+// Devolver el objeto
+
+const creatingObjects = (a) => new Object({ key: a});
+console.log(creatingObjects('a'), creatingObjects('z'), creatingObjects('b'));
+
 /***  ***/
 /***  ***/
 /***  ***/
