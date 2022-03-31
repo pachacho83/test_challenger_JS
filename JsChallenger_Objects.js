@@ -15,7 +15,14 @@ console.log(accessingProperties({  continent: 'Asia',  country: 'Japan'}), acces
 const accessingPropertiesTwo = (obj) => obj['prop-2'];
 console.log(accessingPropertiesTwo({  one: 1,  'prop-2': 2}), accessingPropertiesTwo({  'prop-2': 'two',  prop: 'test'}));
 
-/***  ***/
+/*** Accessing object properties three (Acceso a las propiedades del objeto tres) ***/
+// Escribir una función que tome un objeto con dos propiedades y una cadena como argumentos
+// Debe devolver el valor de la propiedad con clave igual al valor de la cadena
+
+const accessingPropertiesThree = (obj, key) => obj[key];
+console.log(accessingPropertiesThree({  continent: 'Asia',  country: 'Japan'}, 'continent'), 
+            accessingPropertiesThree({  country: 'Sweden',  continent: 'Europe'}, 'country'));
+
 /***  ***/
 /***  ***/
 /***  ***/
