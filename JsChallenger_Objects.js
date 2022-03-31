@@ -39,7 +39,14 @@ console.log(checkPropertyExists({a:1,b:2,c:3},'b'), checkPropertyExists({x:'a',y
 const creatingObjects = (a) => new Object({ key: a});
 console.log(creatingObjects('a'), creatingObjects('z'), creatingObjects('b'));
 
-/***  ***/
+/*** Creating Javascript objects two (Creando objetos Javascript dos) ***/
+// Escribe una función que tome dos cadenas (a y b) como argumentos
+// Crear un objeto que tenga una propiedad con la clave 'a' y un valor de 'b'
+// Devolver el objeto
+
+const creatingObjectsTwo = (a, b) => new Object({ [a] : b });
+console.log(creatingObjectsTwo('a','b'), creatingObjectsTwo('z','x'), creatingObjectsTwo('b','w'));
+
 /***  ***/
 /***  ***/
 /***  ***/
