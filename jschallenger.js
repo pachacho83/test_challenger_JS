@@ -482,7 +482,22 @@ const groupArrayStringsFirstLetter = (arr) =>{
 */
 console.log(groupArrayStringsFirstLetter(['Alf', 'Alice', 'Ben']), groupArrayStringsFirstLetter(['Ant', 'Bear', 'Bird']), groupArrayStringsFirstLetter(['Berlin', 'Paris', 'Prague']));
 
-/***  ***/
+/*** Define an array with conditional elements (Definir una matriz con elementos condicionales) ***/
+// Escribe una función que tome una matriz con elementos arbitrarios y un número como argumentos
+// Devuelve una nueva matriz, el primer elemento debe ser el mismo número dado
+// o cero si el número es menor que 6
+// Los otros elementos deben ser los elementos de la matriz original
+// Intenta no mutar la matriz original
+
+const defineArrayConditionalElements = (arr, num) => {
+  arr.unshift(num < 6 ? 0 : num);
+  return arr;
+}
+/*solucion Autor
+  return [...(num > 5 ? [num] : [0]), ...arr];
+*/
+console.log(defineArrayConditionalElements([1,2,3], 6), defineArrayConditionalElements(['a','b'], 2), defineArrayConditionalElements([null,false], 11));
+
 /***  ***/
 /***  ***/
 /***  ***/
