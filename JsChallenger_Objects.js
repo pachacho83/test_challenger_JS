@@ -23,7 +23,14 @@ const accessingPropertiesThree = (obj, key) => obj[key];
 console.log(accessingPropertiesThree({  continent: 'Asia',  country: 'Japan'}, 'continent'), 
             accessingPropertiesThree({  country: 'Sweden',  continent: 'Europe'}, 'country'));
 
-/***  ***/
+/*** Check if property exists in object (Comprobar si la propiedad existe en el objeto) ***/
+// Escribir una función que tome un objeto (a) y una cadena (b) como argumento
+// Devuelve verdadero si a tiene una propiedad con clave b
+// Devuelve falso en caso contrario
+
+const checkPropertyExists = (a, b) => (Object.keys(a).indexOf(b) > 0 ) ? true : false; /*solucion Autor b in a;*/
+console.log(checkPropertyExists({a:1,b:2,c:3},'b'), checkPropertyExists({x:'a',y:'b',z:'c'},'a'), checkPropertyExists({x:'a',y:'b',z:'c'},'z'));
+
 /***  ***/
 /***  ***/
 /***  ***/
