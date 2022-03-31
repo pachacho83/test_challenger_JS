@@ -432,8 +432,56 @@ return a.reduce((sum, cur) => {
 */
 console.log(sumAllElementsValuesGreater([1, 2, 3, 4, 5, 6, 7], 2), sumAllElementsValuesGreater([-10, -11, -3, 1, -4], -3), sumAllElementsValuesGreater([78, 99, 100, 101, 401], 99));
 
-/***  ***/
-/***  ***/
+/*** Create a range of numbers (Crear un rango de números) ***/
+// Escribe una función que tome dos números (mínimo y máximo) como argumentos
+// Devuelve una matriz de números en el rango min a max
+
+const createArrayRangeNumbers = (min, max) => {
+
+  let newArray = [];
+  while (min <= max) {
+    newArray.push(min);
+    min++;
+  }
+
+  return newArray;
+}
+/*solucion autor
+  let arr = [];
+    for (let i = min; i <= max; i++) {
+      arr.push(i);
+    }
+  return arr;
+*/
+console.log(createArrayRangeNumbers(2, 10), createArrayRangeNumbers(1, 3), createArrayRangeNumbers(-5, 5), createArrayRangeNumbers(2, 7));
+
+/*** Group array of strings by first letter (Agrupe la matriz de cadenas por primera letra) ***/
+// Escribir una función que tome una matriz de cadenas como argumento
+// Agrupa esas cadenas por su primera letra
+// Devuelve un objeto que contiene propiedades con claves que representan las primeras letras
+// Los valores deben ser matrices de cadenas que contengan solo las cadenas correspondientes
+// Por ejemplo, la matriz ['Alf', 'Alice', 'Ben'] debe transformarse en
+// { a: ['Alfa', 'Alicia'], b: ['Ben']}
+
+const groupArrayStringsFirstLetter = (arr) =>{
+
+  const arrayLetters = arr.map(item => [...item][0].toLowerCase());
+  const letterObject = [...new Set(arrayLetters)];
+
+  const objectConstruct = letterObject.map((letter) => {
+    return { [letter] : arr.filter(item => [...item][0].toLowerCase() === letter) };
+  });
+
+  return Object.assign({}, ...objectConstruct);
+}
+/*solucion Autor
+  return arr.reduce((acc, cur) => {
+    const firstLetter = cur.toLowerCase().charAt(0);
+    return { ...acc, [firstLetter]: [...(acc[firstLetter] || []), cur] };
+  }, {});
+*/
+console.log(groupArrayStringsFirstLetter(['Alf', 'Alice', 'Ben']), groupArrayStringsFirstLetter(['Ant', 'Bear', 'Bird']), groupArrayStringsFirstLetter(['Berlin', 'Paris', 'Prague']));
+
 /***  ***/
 /***  ***/
 /***  ***/
