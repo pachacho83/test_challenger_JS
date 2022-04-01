@@ -69,7 +69,21 @@ console.log(extractKeysObjects({a:1,b:2,c:3}), extractKeysObjects({j:9,i:2,x:3,z
 const sumObjectsValues = (a) => Object.values(a).reduce((acum, item) => acum + item, 0);
 console.log(sumObjectsValues({a:1,b:2,c:3}), sumObjectsValues({j:9,i:2,x:3,z:4}), sumObjectsValues({w:15,x:22,y:13}));
 
-/***  ***/
+/*** Remove a property from an object (Eliminar una propiedad de un objeto) ***/
+// Escribir una función que tome un objeto como argumento
+// Debería devolver un objeto con todas las propiedades del objeto original
+// excepto por la propiedad con clave 'b'
+
+const removePropertyObject = (obj) => {
+  delete obj.b;
+  return obj;
+  /*solucion Autor
+    const { b, ...rest } = obj;
+    return rest;
+  */
+}
+console.log(removePropertyObject({ a: 1, b: 7, c: 3 }), removePropertyObject({ b: 0, a: 7, d: 8 }), removePropertyObject({ e: 6, f: 4, b: 5, a: 3 }));
+
 /***  ***/
 /***  ***/
 /***  ***/
