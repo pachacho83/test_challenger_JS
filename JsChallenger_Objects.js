@@ -62,7 +62,13 @@ console.log(creatingObjectsThree(['a','b','c'],[1,2,3]), creatingObjectsThree(['
 const extractKeysObjects = (a) => Object.keys(a);
 console.log(extractKeysObjects({a:1,b:2,c:3}), extractKeysObjects({j:9,i:2,x:3,z:4}), extractKeysObjects({w:15,x:22,y:13}));
 
-/***  ***/
+/*** Sum object values (Sumar valores de objeto) ***/
+// Escribir una función que tome un objeto (a) como argumento
+// Devuelve la suma de todos los valores de los objetos
+
+const sumObjectsValues = (a) => Object.values(a).reduce((acum, item) => acum + item, 0);
+console.log(sumObjectsValues({a:1,b:2,c:3}), sumObjectsValues({j:9,i:2,x:3,z:4}), sumObjectsValues({w:15,x:22,y:13}));
+
 /***  ***/
 /***  ***/
 /***  ***/
