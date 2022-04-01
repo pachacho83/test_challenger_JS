@@ -55,7 +55,13 @@ console.log(creatingObjectsTwo('a','b'), creatingObjectsTwo('z','x'), creatingOb
 const creatingObjectsThree = (a, b) => a.reduce((acc, item, key) => ({ ...acc, [item]: b[key] }), {});
 console.log(creatingObjectsThree(['a','b','c'],[1,2,3]), creatingObjectsThree(['w','x','y','z'],[10,9,5,2]), creatingObjectsThree([1,'b'],['a',2]));
 
-/***  ***/
+/*** Extract keys from Javascript object (Extraer claves del objeto Javascript) ***/
+// Escribir una función que tome un objeto (a) como argumento
+// Devolver una matriz con todas las claves de objeto
+
+const extractKeysObjects = (a) => Object.keys(a);
+console.log(extractKeysObjects({a:1,b:2,c:3}), extractKeysObjects({j:9,i:2,x:3,z:4}), extractKeysObjects({w:15,x:22,y:13}));
+
 /***  ***/
 /***  ***/
 /***  ***/
