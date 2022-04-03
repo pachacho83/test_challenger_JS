@@ -84,7 +84,28 @@ const removePropertyObject = (obj) => {
 }
 console.log(removePropertyObject({ a: 1, b: 7, c: 3 }), removePropertyObject({ b: 0, a: 7, d: 8 }), removePropertyObject({ e: 6, f: 4, b: 5, a: 3 }));
 
-/***  ***/
+/*** Merge two objects with matching keys (Combinar dos objetos con claves coincidentes) ***/
+// Escribe una función que tome dos objetos como argumentos
+// Desafortunadamente, la propiedad 'b' en el segundo objeto tiene la clave incorrecta
+// Debería llamarse 'd' en su lugar
+// Combinar ambos objetos y corregir el nombre de propiedad incorrecto
+// Devuelve el objeto resultante
+// Debe tener las propiedades 'a', 'b', 'c', 'd' y 'e'
+
+const mergeTwoObjectsKeys = (x, y) => {
+
+  const { b } = y;
+  delete y.b;
+  y.d = b;
+  return  Object.assign({}, x,y);
+
+  /*Solucion Autor
+    const { b, ...rest } = y;
+    return { ...x, ...rest, d: b };
+  */
+}
+console.log(mergeTwoObjectsKeys({ a: 1, b: 2 }, { c: 3, b: 4, e: 5 }), mergeTwoObjectsKeys({ a: 5, b: 4 }, { c: 3, b: 1, e: 2 }));
+
 /***  ***/
 /***  ***/
 /***  ***/
