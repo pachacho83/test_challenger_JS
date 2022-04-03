@@ -103,10 +103,31 @@ const mergeTwoObjectsKeys = (x, y) => {
     const { b, ...rest } = y;
     return { ...x, ...rest, d: b };
   */
-}
+};
 console.log(mergeTwoObjectsKeys({ a: 1, b: 2 }, { c: 3, b: 4, e: 5 }), mergeTwoObjectsKeys({ a: 5, b: 4 }, { c: 3, b: 1, e: 2 }));
 
-/***  ***/
+/*** Multiply all object values by x (Multiplica todos los valores de los objetos por x) ***/
+// Escribe una función que tome un objeto (a) y un número (b) como argumentos
+// Multiplica todos los valores de 'a' por 'b'
+// Devuelve el objeto resultante
+
+const MultiplyAllObjectsValues = (a, b) => {
+
+  const objectKeys = Object.keys(a);
+
+  for (const item of objectKeys) {
+    a[item] = a[item] * b;
+  }
+
+  return a;
+  /*Solucion Autor
+    return Object.entries(a).reduce((acc, [key, val]) => {
+      return { ...acc, [key]: val * b };
+    }, {});
+  */
+};
+console.log(MultiplyAllObjectsValues({a:1,b:2,c:3},3), MultiplyAllObjectsValues({j:9,i:2,x:3,z:4},10), MultiplyAllObjectsValues({w:15,x:22,y:13},6));
+
 /***  ***/
 /***  ***/
 /***  ***/
