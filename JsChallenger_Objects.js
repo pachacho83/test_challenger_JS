@@ -133,7 +133,7 @@ console.log(MultiplyAllObjectsValues({a:1,b:2,c:3},3), MultiplyAllObjectsValues(
 // De alguna manera, las propiedades y claves del objeto se mezclaron
 // Intercambiar la clave del objeto Javascript con sus valores y devolver el objeto resultante
 
-const swapObjectKeysValues = (obj) => Object.entries(obj).reduce((acc, [key, val]) => {return { ...acc, [val]: key }}, {});
+const swapObjectKeysValues = (obj) => Object.entries(obj).reduce((acc, [key, val]) => new Object( { ...acc, [val]: key } ), {});
 console.log(swapObjectKeysValues({z:'a',y:'b',x:'c',w:'d'}), swapObjectKeysValues({2:'a',4:'b',6:'c',8:'d'}), swapObjectKeysValues({a:1,z:24}));
 
 /*** Replace empty strings in object with null values (Reemplazar cadenas vacías en objeto con valores nulos) ***/
@@ -142,7 +142,7 @@ console.log(swapObjectKeysValues({z:'a',y:'b',x:'c',w:'d'}), swapObjectKeysValue
 // Reemplazar cadenas vacías y cadenas que contienen solo espacios en blanco con valores nulos
 // Devuelve el objeto resultante
 
-const replaceEmptyStringsNullValues = (obj) => Object.entries(obj).reduce((acc, [key, val])=> { return {...acc, [key]: (val.trim() === '') ? null : val} }, {} );
+const replaceEmptyStringsNullValues = (obj) => Object.entries(obj).reduce((acc, [key, val])=> new Object( {...acc, [key]: (val.trim() === '') ? null : val} ), {} );
 /*Solucion Autor
   const newObj = { ...obj };
   for (key in newObj) {
