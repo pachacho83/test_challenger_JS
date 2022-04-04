@@ -152,6 +152,30 @@ const replaceEmptyStringsNullValues = (obj) => Object.entries(obj).reduce((acc, 
 */
 console.log(replaceEmptyStringsNullValues({ a: 'a', b: 'b', c: '' }), replaceEmptyStringsNullValues({ a: '', b: 'b', c: ' ', d: 'd' }), replaceEmptyStringsNullValues({ a: 'a', b: 'b ', c: ' ', d: '' }));
 
-/***  ***/
+/*** Extracting information from objects (Extraer información de los objetos) ***/
+// Escribir una función que tome un objeto como argumento que contenga propiedades con información personal
+// Extraer nombre, apellido, tamaño y peso si está disponible
+// Si se da tamaño o peso, transforma el valor en una cadena
+// Adjunte la unidad cm al tamaño
+// Adjunte la unidad kg al peso
+// Devuelve un nuevo objeto con todas las propiedades disponibles que nos interesan
+
+const extractingInfoObjects = (obj) => new Object({
+  fn: obj.fn,
+  ln: obj.ln,
+  ...(obj.size && { size: `${obj.size}cm` }),
+  ...(obj.weight && { weight: `${obj.weight}kg` }),
+});
+/*
+  const newObject = Object.entries(obj).reduce((acc, [key, val]) => new Object( {...acc, [key]: (key === 'size') ? val + 'cm' : (key === 'weight') ? val + 'kg' : val} ), {} );
+  delete newObject.age;
+  delete newObject.email;
+  return newObject;
+*/
+console.log(extractingInfoObjects({fn: 'Lisa', ln: 'Müller', age: 17, size: 175, weight: 67}),
+            extractingInfoObjects({fn: 'Martin', ln: 'Harper', age: 26, email: 'martin.harper@test.de', weight: 102}),
+            extractingInfoObjects({fn: 'Andrew', ln: 'Harper', age: 81, size: 175, weight: 71}),
+            extractingInfoObjects({fn: 'Matthew', ln: 'Müller', age: 19, email: 'matthew@mueller.de'}));
+
 /***  ***/
 /***  ***/
