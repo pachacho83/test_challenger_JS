@@ -128,7 +128,14 @@ const MultiplyAllObjectsValues = (a, b) => {
 };
 console.log(MultiplyAllObjectsValues({a:1,b:2,c:3},3), MultiplyAllObjectsValues({j:9,i:2,x:3,z:4},10), MultiplyAllObjectsValues({w:15,x:22,y:13},6));
 
-/***  ***/
+/*** Swap object keys and values (Intercambiar claves y valores de objetos) ***/
+// Escribir una función que tome un objeto como argumento
+// De alguna manera, las propiedades y claves del objeto se mezclaron
+// Intercambiar la clave del objeto Javascript con sus valores y devolver el objeto resultante
+
+const swapObjectKeysValues = (obj) => Object.entries(obj).reduce((acc, [key, val]) => {return { ...acc, [val]: key }}, {});
+console.log(swapObjectKeysValues({z:'a',y:'b',x:'c',w:'d'}), swapObjectKeysValues({2:'a',4:'b',6:'c',8:'d'}), swapObjectKeysValues({a:1,z:24}));
+
 /***  ***/
 /***  ***/
 /***  ***/
