@@ -136,7 +136,22 @@ console.log(MultiplyAllObjectsValues({a:1,b:2,c:3},3), MultiplyAllObjectsValues(
 const swapObjectKeysValues = (obj) => Object.entries(obj).reduce((acc, [key, val]) => {return { ...acc, [val]: key }}, {});
 console.log(swapObjectKeysValues({z:'a',y:'b',x:'c',w:'d'}), swapObjectKeysValues({2:'a',4:'b',6:'c',8:'d'}), swapObjectKeysValues({a:1,z:24}));
 
-/***  ***/
+/*** Replace empty strings in object with null values (Reemplazar cadenas vacías en objeto con valores nulos) ***/
+// Escribir una función que tome un objeto como argumento
+// Algunos de los valores de propiedad contienen cadenas vacías
+// Reemplazar cadenas vacías y cadenas que contienen solo espacios en blanco con valores nulos
+// Devuelve el objeto resultante
+
+const replaceEmptyStringsNullValues = (obj) => Object.entries(obj).reduce((acc, [key, val])=> { return {...acc, [key]: (val.trim() === '') ? null : val} }, {} );
+/*Solucion Autor
+  const newObj = { ...obj };
+  for (key in newObj) {
+    if (newObj[key].trim() === '') newObj[key] = null;
+  }
+  return newObj;
+*/
+console.log(replaceEmptyStringsNullValues({ a: 'a', b: 'b', c: '' }), replaceEmptyStringsNullValues({ a: '', b: 'b', c: ' ', d: 'd' }), replaceEmptyStringsNullValues({ a: 'a', b: 'b ', c: ' ', d: '' }));
+
 /***  ***/
 /***  ***/
 /***  ***/
