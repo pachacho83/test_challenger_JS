@@ -20,7 +20,18 @@ const returnNumberDaysBetweenDates = (a, b) => Math.abs(a-b)/(1000 * 3600 * 24);
 */
 console.log(returnNumberDaysBetweenDates(new Date('2020-06-11'), new Date('2020-06-01')), returnNumberDaysBetweenDates(new Date('2000-01-01'), new Date('2020-06-01')));
 
-/***  () ***/
+/*** Check if two dates fall on the exact same day (Comprobar si dos fechas caen exactamente en el mismo día) ***/
+// Escribir una función que tome dos instancias de fecha como argumento
+// Debería volver verdadero si caen exactamente el mismo día
+// Debería devolver falso de lo contrario
+
+const checkIfExactSameDay = (a, b) => a.getDay() === b.getDay();
+/*Solucion Autor return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate()=== b.getDate()*/
+console.log(checkIfExactSameDay(new Date('2000/01/01'), new Date('2000/01/01')),
+            checkIfExactSameDay(new Date('2000/01/01'), new Date('2000/01/02')),
+            checkIfExactSameDay(new Date('2001/01/01'), new Date('2000/01/01')),
+            checkIfExactSameDay(new Date('2000/11/01'), new Date('2000/01/01')));
+
 /***  () ***/
 /***  () ***/
 /***  () ***/
