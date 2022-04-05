@@ -186,3 +186,29 @@ console.log(extractingInfoObjects({fn: 'Lisa', ln: 'Müller', age: 17, size: 175
 const addPropertyEachObject = (arr, str) => arr.map((item) => ({ ...item, continent: str }));
 console.log(addPropertyEachObject([{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }], 'Asia'), addPropertyEachObject([{ city: 'Stockholm', country: 'Sweden' }, { city: 'Paris', country: 'France' }], 'Europe'));
 
+/*** Convert array to object with counter (Convertir matriz en objeto con contador) ***/
+// Escribir una función que tome una matriz de números como argumento
+// Convierte la matriz en un objeto
+// Debe tener una clave para cada valor único de la matriz
+// El valor del objeto correspondiente debe ser el número de veces que aparece la clave dentro de la matriz
+
+const convertArrayToObjectCounter = (a) => {
+
+  const KeysObject = [...new Set(a)];
+  let endObject = new Object();
+
+  KeysObject.map( (item) => {
+
+    const counterArray = a.filter(data => data === item).length;
+    endObject[item] = counterArray;
+  });
+
+  return endObject;
+
+  /*Solucion Autor
+    return a.reduce((acc, cur) => {
+      return { ...acc, [cur]: (acc[cur] || 0) + 1 };
+    }, {});
+  */
+}
+console.log(convertArrayToObjectCounter([1,2,2,3]), convertArrayToObjectCounter([9,9,9,99]), convertArrayToObjectCounter([4,3,2,1]));
