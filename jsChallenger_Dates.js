@@ -4,7 +4,7 @@
 // Debería devolver verdadero si las fechas son iguales
 // Debería devolver falso de lo contrario
 
-const checkDatesEqual = (a, b) => a.getTime() === b.getTime(); //+a === +b
+const checkDatesEqual = (a, b) => a.getTime() === b.getTime(); //+a === +b //número de milisegundos transcurridos desde el 1 de Enero de 1970, 00:00:00 UTC
 console.log(checkDatesEqual(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:45:00')), 
             checkDatesEqual(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:00:00')), 
             checkDatesEqual(new Date('2001/01/01 08:00:00'), new Date('2000/01/01 08:00:00')));
@@ -32,7 +32,18 @@ console.log(checkIfExactSameDay(new Date('2000/01/01'), new Date('2000/01/01')),
             checkIfExactSameDay(new Date('2001/01/01'), new Date('2000/01/01')),
             checkIfExactSameDay(new Date('2000/11/01'), new Date('2000/01/01')));
 
-/***  () ***/
+/*** Check if two dates are within 1 hour from each other (Comprobar si dos fechas están dentro de 1 hora de diferencia) ***/
+// Escribir una función que tome dos instancias de fecha como argumento
+// Debería devolver verdadero si la diferencia entre las fechas es menor o igual a 1 hora
+// Debería devolver falso de lo contrario
+
+const checkIfDifferenceWithinHour = (a, b) => (Math.abs(a-b)/(1000 * 60) <= 60) ? true : false;
+/*Solucion Autor return Math.abs(a - b) / 1000 / 60 <= 60*/
+console.log(checkIfDifferenceWithinHour(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:45:00')),
+            checkIfDifferenceWithinHour(new Date('2000/01/01 09:00:00'), new Date('2000/01/01 08:45:00')),
+            checkIfDifferenceWithinHour(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 09:45:00')),
+            checkIfDifferenceWithinHour(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 09:00:00')));
+
 /***  () ***/
 /***  () ***/
 /***  () ***/
