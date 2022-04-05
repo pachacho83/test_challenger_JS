@@ -177,5 +177,12 @@ console.log(extractingInfoObjects({fn: 'Lisa', ln: 'Müller', age: 17, size: 175
             extractingInfoObjects({fn: 'Andrew', ln: 'Harper', age: 81, size: 175, weight: 71}),
             extractingInfoObjects({fn: 'Matthew', ln: 'Müller', age: 19, email: 'matthew@mueller.de'}));
 
-/***  ***/
-/***  ***/
+/*** Add property to each object in array (Agregar propiedad a cada objeto en la matriz) ***/
+// Escribe una función que tome una matriz de objetos y una cadena como argumentos
+// Agrega una propiedad con clave 'continente' y valor igual a la cadena a cada uno de los objetos
+// Devuelve la nueva matriz de objetos
+// Consejo: trate de no mutar la matriz original
+
+const addPropertyEachObject = (arr, str) => arr.map((item) => ({ ...item, continent: str }));
+console.log(addPropertyEachObject([{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }], 'Asia'), addPropertyEachObject([{ city: 'Stockholm', country: 'Sweden' }, { city: 'Paris', country: 'France' }], 'Europe'));
+
