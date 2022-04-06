@@ -44,7 +44,17 @@ console.log(checkIfDifferenceWithinHour(new Date('2000/01/01 08:00:00'), new Dat
             checkIfDifferenceWithinHour(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 09:45:00')),
             checkIfDifferenceWithinHour(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 09:00:00')));
 
-/***  () ***/
+/*** Check if one date is earlier than another (Comprobar si una fecha es anterior a otra) ***/
+// Escriba una función que tome dos instancias de fecha (a y b) como argumentos
+// Debería devolver verdadero si a es anterior a b
+// Debería devolver falso de lo contrario
+
+const checkAnotherDate = (a, b) => ( (a.getTime() - b.getTime()) < 0 ) ? true : false;
+/*Solucion Autor a < b*/
+console.log(checkAnotherDate(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:45:00')),
+            checkAnotherDate(new Date('2000/01/01 08:45:00'), new Date('2000/01/01 08:00:00')),
+            checkAnotherDate(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:00:00')));
+
 /***  () ***/
 /***  () ***/
 /***  () ***/
