@@ -92,4 +92,22 @@ console.log(calculateDifferenceBetweenDates(new Date('2000/01/01 08:00:00'), new
             calculateDifferenceBetweenDates(new Date('2000/01/01 09:50:23'), new Date('2000/01/01 08:00:00')),
             calculateDifferenceBetweenDates(new Date('2000/01/01 11:04:12'), new Date('2000/01/01 08:00:00')));
 
-/***  () ***/
+/*** Return the next nearest quarter hour of a date (Devuelve el próximo cuarto de hora más cercano de una fecha) ***/
+// Escribir una función que tome una instancia de Fecha como argumento
+// Debería devolver el próximo cuarto de hora más cercano en minutos
+// Por ejemplo, si la fecha dada tiene la hora 10:01, la función debería devolver 15
+
+const returnNextNearestQuarterHour = (date) => {
+  
+  let minutes = date.getMinutes();
+  while (minutes % 15 !== 0) minutes++;
+  return minutes;
+}
+/*Solucion Autor
+  const quarter = 15 * 60 * 1000;
+  const closestQuarter = new Date(Math.round(date / quarter) * quarter);
+  const nextQuarter = closestQuarter.getTime() < date.getTime() ? new Date(closestQuarter.getTime() + quarter) : closestQuarter;
+  return nextQuarter.getMinutes();
+*/
+console.log(returnNextNearestQuarterHour(new Date(2021, 8, 10, 15, 14, 00)), returnNextNearestQuarterHour(new Date(2021, 8, 10, 15, 31, 00)), 
+            returnNextNearestQuarterHour(new Date(2021, 8, 10, 15, 22, 00)));
