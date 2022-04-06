@@ -60,11 +60,36 @@ console.log(checkAnotherDate(new Date('2000/01/01 08:00:00'), new Date('2000/01/
 // Debería agregar b días a a y devolver la cantidad de milisegundos desde el 1 de enero de 1970, 00:00:00 UTC
 
 const addNDaysDate = (a, b) => a.getTime() + (b*1000*24*60*60);
-console.log(addNDaysDate(new Date(Date.UTC(2000,01,01)), 31),addNDaysDate(new Date(Date.UTC(2000,01,01)), 10),addNDaysDate(new Date(Date.UTC(2000,02,28,)), 2));
 /*Solucion Autor
   const currentDays = a.getDate();
   return a.setDate(currentDays + b)
 */
+console.log(addNDaysDate(new Date(Date.UTC(2000,01,01)), 31),addNDaysDate(new Date(Date.UTC(2000,01,01)), 10),addNDaysDate(new Date(Date.UTC(2000,02,28,)), 2));
 
-/***  () ***/
+/*** Calculate difference between two dates in hours, minutes, and seconds (Calcula la diferencia entre dos fechas en horas, minutos y segundos) ***/
+// Este es un desafío más difícil
+// Escribe una función que tome dos instancias de fecha como argumentos
+// Debería devolver un objeto con las propiedades 'hrs', 'min' y 'sec'
+// Los valores correspondientes deben mostrar la diferencia absoluta entre las dos fechas en horas, minutos y segundos
+
+const calculateDifferenceBetweenDates = (a, b) => {
+
+  const milliseconds = (Math.abs(a-b));
+  const hrs =  parseInt((milliseconds % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const min = parseInt((milliseconds % (1000 * 60 * 60)) / (1000 * 60));
+  const sec = (milliseconds % (1000 * 60)) / 1000;
+
+  return { hrs, min, sec };
+};
+/*Solucion Autor
+  const dif = Math.abs(a - b);
+  const hrs = Math.floor(dif / 1000 / 60 / 60);
+  const min = Math.floor(dif / 1000 / 60) % (hrs * 60 || 60);
+  const sec = Math.floor(dif / 1000) % (min * 60 + hrs * 60 * 60 || 60);
+  return { hrs, min, sec }
+*/
+console.log(calculateDifferenceBetweenDates(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:45:10')),
+            calculateDifferenceBetweenDates(new Date('2000/01/01 09:50:23'), new Date('2000/01/01 08:00:00')),
+            calculateDifferenceBetweenDates(new Date('2000/01/01 11:04:12'), new Date('2000/01/01 08:00:00')));
+
 /***  () ***/
