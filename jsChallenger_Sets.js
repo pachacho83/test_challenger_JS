@@ -27,7 +27,21 @@ const getUnionSets = (a, b) => new Set([...a, ...b]);
 */
 console.log(getUnionSets(new Set('123'), new Set('234')), getUnionSets(new Set([1, 2, 3]), new Set([3, 4, 5])), getUnionSets(new Set([false, false, NaN]), new Set([true, true, NaN])));
 
-/***  () ***/
+/*** Creating Javascript Sets (Creación de conjuntos de Javascript) ***/
+// Escribe una función que tome tres elementos de cualquier tipo como argumentos
+// Crear un Conjunto a partir de esos elementos
+// Devuelve el resultado
+
+const creatingSets = (a, b, c) => new Set([a, b, c]);
+/*Solucion Autor
+  const set = new Set();
+  set.add(a);
+  set.add(b);
+  set.add(c);
+  return set;
+*/
+console.log(creatingSets(1, 'b', 3), creatingSets(NaN, null, false), creatingSets('a', ['b'], { c: 3 }));
+
 /***  () ***/
 /***  () ***/
 /***  () ***/
