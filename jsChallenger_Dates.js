@@ -55,6 +55,16 @@ console.log(checkAnotherDate(new Date('2000/01/01 08:00:00'), new Date('2000/01/
             checkAnotherDate(new Date('2000/01/01 08:45:00'), new Date('2000/01/01 08:00:00')),
             checkAnotherDate(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:00:00')));
 
-/***  () ***/
+/*** Add n days to an existing date (Agregar n días a una fecha existente) ***/
+// Escribe una función que tome como argumento una instancia de fecha (a) y un número (b)
+// Debería agregar b días a a y devolver la cantidad de milisegundos desde el 1 de enero de 1970, 00:00:00 UTC
+
+const addNDaysDate = (a, b) => a.getTime() + (b*1000*24*60*60);
+console.log(addNDaysDate(new Date(Date.UTC(2000,01,01)), 31),addNDaysDate(new Date(Date.UTC(2000,01,01)), 10),addNDaysDate(new Date(Date.UTC(2000,02,28,)), 2));
+/*Solucion Autor
+  const currentDays = a.getDate();
+  return a.setDate(currentDays + b)
+*/
+
 /***  () ***/
 /***  () ***/
