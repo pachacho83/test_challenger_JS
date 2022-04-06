@@ -42,6 +42,16 @@ const creatingSets = (a, b, c) => new Set([a, b, c]);
 */
 console.log(creatingSets(1, 'b', 3), creatingSets(NaN, null, false), creatingSets('a', ['b'], { c: 3 }));
 
-/***  () ***/
+/*** Delete element from Set (Eliminar elemento del conjunto) ***/
+// Escribir una función que tome un Set y un valor como argumento
+// Si existe en el Conjunto, elimina el valor del Conjunto
+// Devuelve el resultado
+
+const deleteElementSets = (set, val) => {
+  set.delete(val); 
+  return set;
+}
+console.log(deleteElementSets(new Set([1, 2, 3]), 1), deleteElementSets(new Set('12345'), '3'), deleteElementSets(new Set([1, 2, 3]), 4));
+
 /***  () ***/
 /***  () ***/
