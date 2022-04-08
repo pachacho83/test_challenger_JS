@@ -17,3 +17,6 @@ const totalVocales = saberVocales(text);
 
 console.log(`Numero de Vocales ${ totalVocales }`);
 
+
+const transfArray = (data) => [data];
+console.log(transfArray (123456));
