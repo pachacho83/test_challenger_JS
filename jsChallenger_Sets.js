@@ -58,6 +58,12 @@ console.log(deleteElementSets(new Set([1, 2, 3]), 1), deleteElementSets(new Set(
 // Si aún no existe, agregue cada elemento de la matriz al Conjunto
 // Devolver el Conjunto modificado
 
+const addElementsSet = (set, arr) => new Set([...set, ...arr]);
+/*Solucion Autor
+  arr.forEach((e) => set.add(e));
+  return set;
+*/
+console.log(addElementsSet(new Set([1, 2, 3]), [4, 5, 6]), addElementsSet(new Set('12345'), [...'6789']), addElementsSet(new Set([1, 2, 3]), [2, 3]));
 
 /*** Get Intersection of two Javascript Sets (Obtenga la intersección de dos conjuntos de Javascript) ***/
 // Escribe una función que tome dos conjuntos (a y b) como argumentos
