@@ -169,19 +169,6 @@ const nextHigherPrimeNumber = (a) => {
 
   const checkPrime = (num) => {
 
-    /*
-    // solucion Autor
-    function isPrime(num) {
-      for (let i = 2; i <= Math.sqrt(num); i++) {
-        if (num % i === 0) return false;
-      }
-      return num > 1;
-    }
-    let n = a;
-    while (!isPrime(n)) n++;
-    return n
-    */
-
     let numberMultiplication = 2;
 
     for (let i = 2; i < num; i++) {
@@ -199,6 +186,17 @@ const nextHigherPrimeNumber = (a) => {
 
   return newNumber;
 }
+/*Solucion Autor
+  function isPrime(num) {
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+      if (num % i === 0) return false;
+    }
+    return num > 1;
+  }
+  let n = a;
+  while (!isPrime(n)) n++;
+  return n
+*/
 console.log(nextHigherPrimeNumber(38), nextHigherPrimeNumber(7), nextHigherPrimeNumber(115), nextHigherPrimeNumber(2000));
 
 /*** Find next higher natural number that is divisble by y (Encuentre el siguiente número natural más alto que sea divisible por y) ***/
