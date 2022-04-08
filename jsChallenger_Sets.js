@@ -53,5 +53,13 @@ const deleteElementSets = (set, val) => {
 }
 console.log(deleteElementSets(new Set([1, 2, 3]), 1), deleteElementSets(new Set('12345'), '3'), deleteElementSets(new Set([1, 2, 3]), 4));
 
-/***  () ***/
-/***  () ***/
+/*** Add multiple elements to Set (Agregar múltiples elementos al Conjunto) ***/
+// Escribir una función que tome un Conjunto y una matriz como argumentos
+// Si aún no existe, agregue cada elemento de la matriz al Conjunto
+// Devolver el Conjunto modificado
+
+
+/*** Get Intersection of two Javascript Sets (Obtenga la intersección de dos conjuntos de Javascript) ***/
+// Escribe una función que tome dos conjuntos (a y b) como argumentos
+// Obtener la intersección de los conjuntos
+// En otras palabras, devuelve un conjunto que contiene todos los elementos que están tanto en a como en b
