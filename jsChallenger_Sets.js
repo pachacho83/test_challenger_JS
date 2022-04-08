@@ -69,3 +69,23 @@ console.log(addElementsSet(new Set([1, 2, 3]), [4, 5, 6]), addElementsSet(new Se
 // Escribe una función que tome dos conjuntos (a y b) como argumentos
 // Obtener la intersección de los conjuntos
 // En otras palabras, devuelve un conjunto que contiene todos los elementos que están tanto en a como en b
+
+const getIntersectionSets = (a, b) => { 
+
+  const equals = [];
+
+  [...a].map((itemA) => {
+    
+    for (const itemB of [...b]) {
+      itemA === itemB && equals.push(itemB);
+    }
+  });
+
+  return new Set(equals);
+}
+/*Solucion Autor
+  const int = new Set();
+  a.forEach(el => b.has(el) && int.add(el));
+  return int;
+*/
+console.log(getIntersectionSets(new Set([1, 2, 3]), new Set([4, 5, 6])), getIntersectionSets(new Set('12345'), new Set([...'45678'])), getIntersectionSets(new Set([1, 2, 3]), new Set([2, 3, 4])));
